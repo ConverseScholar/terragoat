@@ -20,6 +20,8 @@ resource "aws_s3_bucket" "data" {
   })
 }
 
+# commented
+
 resource "aws_s3_bucket_object" "data_object" {
   # checkov:skip=CKV_AWS_186: ADD REASON
   bucket = aws_s3_bucket.data.id
@@ -60,7 +62,6 @@ resource "aws_s3_bucket" "financials" {
     git_repo             = "terragoat"
     yor_trace            = "0e012640-b597-4e5d-9378-d4b584aea913"
   })
-
 }
 
 resource "aws_s3_bucket" "operations" {
